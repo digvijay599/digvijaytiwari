@@ -94,7 +94,7 @@
         portfolioItems.forEach((item, index) => {
             const categoriesClass = item.categories.map(cat => cat.replace(/[^a-zA-Z0-9-_]/g, '')).join(' ');
             const portfolioHTML = `
-                    <div class="col-lg-4 col-md-6 portfolio-item ${categoriesClass} mb-4">
+                    <div class="col-lg-6 col-md-6 portfolio-item ${categoriesClass} mb-4">
                     <div class="position-relative overflow-hidden rounded-lg shadow-sm portfolio-hover-effect">
                         <img class="img-fluid w-100" src="${item.image}" alt="${item.title}">
                         <div class="portfolio-text bg-dark bg-opacity-75 d-flex flex-column justify-content-center align-items-center p-4 text-center">
