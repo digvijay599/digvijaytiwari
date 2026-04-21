@@ -1,67 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 
 <head>
     <meta charset="utf-8">
-    <title>Digvijay Tiwari</title>
+    <title>Digvijay Tiwari — Senior Full Stack Developer</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta name="keywords"
-        content="Full Stack Developer, MERN Stack Developer, Web Developer, React Developer, Node.js Developer, JavaScript Expert, WordPress Developer, Digvijay Tiwari, Frontend Developer, Backend Developer, Scalable Web Applications">
+        content="Full Stack Developer, MERN Stack Developer, React Developer, Node.js Developer, JavaScript Expert, WordPress Developer, Digvijay Tiwari, Senior Software Engineer, Freelance Developer, AI Developer">
     <meta name="description"
-        content="Digvijay Tiwari - Senior Full Stack Developer with 7+ years of experience specializing in MERN stack, WordPress, and custom web solutions. Expert in creating scalable, high-performing web applications.">
+        content="Digvijay Tiwari — Senior Full Stack Developer with 7+ years of experience. MERN stack, React, Node.js, AI/ML, Cloud & DevOps. Available for freelance projects.">
     <meta name="author" content="Digvijay Tiwari">
     <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.digvijaytiwari.in/">
 
     <link href="img/favicon.ico" rel="icon">
 
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <!-- Theme persistence — must run before CSS to prevent FOUC -->
+    <script>(function () { var t = localStorage.getItem('theme') || 'dark'; document.documentElement.setAttribute('data-theme', t); })();</script>
 
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&family=Permanent+Marker&display=swap"
+        rel="stylesheet">
 
-    <!-- Bootstrap CSS (compatible v4.x to match existing Bootstrap JS used later) -->
+    <!-- Bootstrap 4 CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
 
+    <!-- Owl Carousel CSS -->
     <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
-    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.theme.default.min.css" rel="stylesheet">
 
+    <!-- Splitting.js CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/splitting@1.0.6/dist/splitting.min.css">
+
+    <!-- Compiled Styles -->
     <link href="css/style.min.css" rel="stylesheet">
-    <!-- Theme variables and custom styles are now in SCSS -->
 
-    <!-- Structured data (JSON-LD) for SEO: Person / Professional -->
+    <!-- Structured Data -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Digvijay Tiwari",
-      "url": "https://digvijaytiwari.com",
+      "url": "https://www.digvijaytiwari.in",
       "sameAs": ["https://www.linkedin.com/in/digvijaytiwari/"],
       "jobTitle": "Senior Full Stack Developer",
-      "description": "Senior Full Stack Developer specializing in MERN stack, WordPress, and responsive web applications."
+      "description": "Senior Full Stack Developer specializing in MERN stack, React, Node.js, AI/ML, and cloud solutions."
     }
     </script>
 
-    <!-- Open Graph + Twitter Card for better sharing previews -->
+    <!-- Open Graph -->
     <meta property="og:site_name" content="Digvijay Tiwari" />
     <meta property="og:title" content="Digvijay Tiwari — Senior Full Stack Developer" />
     <meta property="og:description"
-        content="Senior Full Stack Developer specializing in MERN stack, React, Node.js, and WordPress. Building scalable, high-performance web apps." />
+        content="Senior Full Stack Developer specializing in MERN stack, React, Node.js, AI/ML. Available for freelance." />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://digvijaytiwari.com" />
-    <meta property="og:image" content="https://digvijaytiwari.com/img/about.jpg" />
+    <meta property="og:url" content="https://www.digvijaytiwari.in" />
+    <meta property="og:image" content="https://www.digvijaytiwari.in/img/about.jpg" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Digvijay Tiwari — Senior Full Stack Developer" />
     <meta name="twitter:description"
-        content="MERN stack, React, Node.js, WordPress — building fast, secure, and SEO-friendly web applications." />
-    <meta name="twitter:image" content="https://digvijaytiwari.com/img/about.jpg" />
+        content="MERN stack, React, Node.js, AI/ML — building fast, secure, scalable web applications." />
+    <meta name="twitter:image" content="https://www.digvijaytiwari.in/img/about.jpg" />
 </head>
 
 <body data-spy="scroll" data-target=".navbar" data-offset="51">
-    <nav class="navbar fixed-top shadow-sm navbar-expand-lg bg-light navbar-light py-3 py-lg-0 px-lg-5">
+
+    <!-- Custom Cursor -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+
+    <!-- Scroll Progress -->
+    <div id="scroll-progress"></div>
+
+    <!-- ===== NAVBAR ===== -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark py-3 py-lg-0 px-lg-5">
         <a href="index.html" class="navbar-brand ml-lg-3">
-            <img class="logo" src="img/logo1.svg" alt="logo">
+            <img class="logo" src="img/logo1.svg" alt="Digvijay Tiwari">
         </a>
         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -70,564 +90,474 @@
             <div class="navbar-nav m-auto py-0">
                 <a href="#home" class="nav-item nav-link active">Home</a>
                 <a href="#about" class="nav-item nav-link">About</a>
-                <a href="#qualification" class="nav-item nav-link">Quality</a>
-                <a href="#skill" class="nav-item nav-link">Skill</a>
-                <a href="#service" class="nav-item nav-link">Service</a>
+                <a href="#skill" class="nav-item nav-link">Skills</a>
+                <a href="#service" class="nav-item nav-link">Services</a>
                 <a href="#portfolio" class="nav-item nav-link">Portfolio</a>
-                <a href="#testimonial" class="nav-item nav-link">Review</a>
-                <a href="#blog" class="nav-item nav-link">Blog</a>
+                <a href="#testimonial" class="nav-item nav-link">Reviews</a>
                 <a href="#contact" class="nav-item nav-link">Contact</a>
             </div>
-            <a href="" class="btn btn-primary d-none d-lg-block">Hire Me</a>
+            <button id="theme-toggle" class="theme-toggle" title="Toggle light/dark mode" aria-label="Toggle theme">
+                <i class="fas fa-sun"></i>
+            </button>
+            <a href="#contact" class="btn btn-primary d-none d-lg-block">Hire Me</a>
         </div>
     </nav>
-    <div class="container-fluid bg-primary d-flex align-items-center mb-5 py-5" id="home"
-        style="background-image: url('img/cta-bg-shape.png'); min-height: 100vh;">
-        <div class="container">
+
+    <!-- ===== HERO ===== -->
+    <section id="home">
+        <div id="tsparticles"></div>
+
+        <div class="container hero-content">
             <div class="row align-items-center">
-                <div class="col-lg-5 px-5 pl-lg-0 pb-5 pb-lg-0">
-                    <img class="img-fluid w-100 rounded-circle shadow-sm" src="img/about-2.jpg" alt="">
-                </div>
-                <div class="col-lg-7 text-center text-lg-left">
-                    <h3 class="text-dark font-weight-normal mb-3">Welcome, I'm</h3>
-                    <h1 class="display-3 text-uppercase text-dark mb-2">
-                        Digvijay Nath Tiwari
+                <div class="col-lg-6 order-2 order-lg-1">
+
+                    <div class="hero-badge">
+                        <span class="badge-dot"></span>
+                        Available for Freelance Projects
+                    </div>
+
+                    <h1 class="hero-title">
+                        <span class="d-block">Hi, I'm</span>
+                        <span class="name-gradient">Digvijay Tiwari</span>
                     </h1>
-                    <h1 class="typed-text-output d-inline font-weight-lighter text-dark"></h1>
-                    <div class="typed-text d-none">Senior Full Stack Developer, MERN Stack Expert, React.js Specialist,
-                        Node.js Developer, WordPress Expert</div>
-                    <p class="lead mt-3 mb-4">Transforming ideas into powerful web solutions with cutting-edge
-                        technology</p>
-                    <div class="d-flex align-items-center justify-content-center justify-content-lg-start pt-5">
-                        <a href="#contact" class="btn btn-primary mr-4">Hire Me</a>
-                        <a href="path/to/your-cv.pdf" class="btn btn-outline-dark mr-5">Download CV</a>
 
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid py-5" id="about">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase" style="color:#f3f7fb;">About</h1>
-                <h1 class="position-absolute text-uppercase text-dark">About Me</h1>
-            </div>
-            <div class="row align-items-center">
-                <div class="col-lg-5 pb-4 pb-lg-0">
-                    <img class="img-fluid rounded w-100" src="img/about.jpg"
-                        alt="Digvijay Tiwari, Senior Full Stack Developer">
-                </div>
-                <!-- <div class="col-lg-7">
-                    <h3 class="mb-4">Full Stack Developer</h3>
-                    <p>With over 7 years of experience as a full-stack web developer, I specialize in creating custom
-                        websites and web applications that deliver exceptional user experiences. From concept and design
-                        to development, testing, and deployment, I bring expertise to every phase of the development
-                        lifecycle. My mission is to provide tailored solutions that align with your business goals and
-                        exceed expectations.</p>
-
-                    <p>Proficient in WordPress development, the MERN stack (MongoDB, Express.js, React.js, Node.js), and
-                        modern web technologies, I have a proven track record of building scalable, high-performing
-                        solutions. Whether it’s developing a responsive e-commerce platform or a bespoke business
-                        application, I ensure quality and innovation in every project.</p>
-
-                    <p>I thrive as both an individual contributor and a team leader, with a passion for driving project
-                        success in dynamic environments. My focus on delivering SEO-optimized, fast, and secure websites
-                        makes me the ideal partner for businesses looking to enhance their online presence. Let’s work
-                        together to bring your vision to life.</p>
-                    <a href="#contact" class="btn btn-primary mr-4">Hire Me</a>
-                </div> -->
-                <div class="col-lg-7">
-                    <h3 class="mb-4">Senior Full Stack Developer</h3>
-                    <div class="d-flex align-items-center mb-4">
-                        <div class="border-left border-primary pt-2 pl-4">
-                            <h5 class="text-dark">7+ Years of Professional Experience</h5>
-                            <span class="text-primary">Transforming Ideas into Powerful Digital Solutions</span>
-                        </div>
+                    <div class="hero-typed">
+                        <span class="typed-text-output"></span>
+                        <div class="typed-text d-none">Senior Full Stack Developer, MERN Stack Expert, React.js
+                            Specialist, Node.js Developer, AI Solutions Architect, Saas Solutions Engineer, WordPress
+                            Developer</div>
                     </div>
 
-                    <p class="lead mb-4">
-                        Passionate about crafting scalable web applications and delivering exceptional digital
-                        experiences. Specialized in full-stack development with a focus on performance, security, and
-                        user experience.
+                    <p class="hero-description">
+                        Transforming complex ideas into powerful, scalable web solutions. 7+ years crafting
+                        enterprise-grade applications with cutting-edge technology.
                     </p>
 
-                    <div class="row mb-4">
-                        <div class="col-sm-6">
-                            <div class="bg-light rounded p-4 mb-4">
-                                <i class="fas fa-code fa-2x text-primary mb-3"></i>
-                                <h5 class="mb-3">Technical Expertise</h5>
-                                <p class="mb-0">MERN Stack specialist with deep knowledge of modern web technologies and
-                                    cloud platforms.</p>
-                            </div>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn-primary-hero">
+                            <i class="fas fa-paper-plane"></i> Hire Me
+                        </a>
+                        <a href="#portfolio" class="btn-outline-hero">
+                            <i class="fas fa-eye"></i> View Work
+                        </a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <div class="stat-num">7+</div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-label">Years Exp.</div>
                         </div>
-                        <div class="col-sm-6">
-                            <div class="bg-light rounded p-4 mb-4">
-                                <i class="fas fa-project-diagram fa-2x text-primary mb-3"></i>
-                                <h5 class="mb-3">Project Leadership</h5>
-                                <p class="mb-0">Led 20+ successful projects from concept to deployment, ensuring optimal
-                                    results.</p>
-                            </div>
+                        <div class="stat-item">
+                            <div class="stat-num">50+</div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-label">Projects</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">30+</div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-num">100%</div>
+                            <div class="stat-divider"></div>
+                            <div class="stat-label">Satisfaction</div>
                         </div>
                     </div>
 
-                    <h5 class="mb-3">Core Competencies:</h5>
-                    <div class="row mb-4">
-                        <div class="col-sm-6">
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary mr-2"></i>Full-Stack
-                                    Development</li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary mr-2"></i>React.js & Node.js
-                                </li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary mr-2"></i>MongoDB & SQL</li>
-                            </ul>
-                        </div>
-                        <div class="col-sm-6">
-                            <ul class="list-unstyled">
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary mr-2"></i>API Development
-                                </li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary mr-2"></i>Cloud Solutions
-                                </li>
-                                <li class="mb-2"><i class="fas fa-check-circle text-primary mr-2"></i>Performance
-                                    Optimization</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="mb-4">
-                        <div class="d-flex align-items-center mb-2">
-                            <i class="fas fa-trophy text-primary mr-2"></i>
-                            <h6 class="font-weight-bold mb-0">Key Achievements:</h6>
-                        </div>
-                        <p class="pl-4">Developed high-performance web applications that increased client revenue by
-                            150%. Implemented optimization strategies resulting in 40% faster load times and 200%
-                            increase in user engagement.</p>
-                    </div>
-
-                    <div class="d-flex">
-                        <a href="#contact" class="btn btn-primary mr-4">Hire Me</a>
-                        <a href="#portfolio" class="btn btn-outline-primary">View Portfolio</a>
+                </div>
+                <div class="col-lg-6 order-1 order-lg-2 text-center mb-5 mb-lg-0">
+                    <div class="hero-image-wrap d-inline-block">
+                        <img class="img-fluid" src="img/about-2.jpg" alt="Digvijay Tiwari - Senior Full Stack Developer"
+                            style="width: 320px; height: 320px; object-fit: cover; object-position: top;">
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid py-5" id="skill">
+
+        <!-- <a href="#about" class="hero-scroll-hint">
+            <span>Scroll</span>
+            <i class="fas fa-chevron-down"></i>
+        </a> -->
+    </section>
+
+    <!-- ===== ABOUT ===== -->
+    <section id="about" class="py-5">
         <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center mb-5">
-                <h1 class="display-1 text-uppercase" style="color:#f3f7fb;">Skills</h1>
-                <h1 class="position-absolute text-uppercase text-dark">Tech Stack</h1>
+            <div class="section-header">
+                <span class="section-label">Who I Am</span>
+                <h2>About <span>Me</span></h2>
+                <p>Passionate engineer who builds robust, high-performance solutions and thrives on solving hard
+                    problems.</p>
             </div>
 
-            <!-- Expanded modern skills grid -->
-            <section class="skills-grid" aria-label="Technical skills">
-                <div class="row">
+            <div class="bento-grid">
+
+                <!-- Profile Image -->
+                <div class="bento-card bento-profile">
+                    <img src="img/about.jpg" alt="Digvijay Tiwari">
                 </div>
-        </div>
-    </div>
-    <div class="container-fluid pt-5" id="service">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center mb-5">
-                <h1 class="display-1 text-uppercase" style="color:#f3f7fb;">Services</h1>
-                <h1 class="position-absolute text-uppercase text-dark">What I Offer</h1>
-            </div>
-            <div class="row">
-                <!-- Custom Web Application Development -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <article class="service-card p-4 h-100 rounded shadow-sm" data-animate="fade-up">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-sq bg-white rounded-circle d-flex align-items-center justify-content-center mr-3"
-                                aria-hidden="true" style="width:48px;height:48px;">
-                                <i class="fas fa-laptop-code fa-lg text-primary"></i>
-                            </div>
-                            <h4 class="mb-0">Full Stack Web Application Development (React, Node.js, MERN)</h4>
-                        </div>
-                        <p class="text-muted">Building scalable, secure, and high-performance web apps using React,
-                            Node.js, MERN stack, and modern technologies. Tailored solutions for startups and
-                            enterprises.</p>
-                        <ul class="text-muted small mb-3">
-                            <li>Full-stack (MERN, Next.js, etc.)</li>
-                            <li>Responsive, accessible UI</li>
-                            <li>Enterprise-grade security</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline-primary btn-sm">Start Your Project</a>
-                    </article>
+
+                <!-- Bio -->
+                <div class="bento-card bento-bio">
+                    <h3>Senior Full Stack Developer &amp; Freelancer</h3>
+                    <p>
+                        With 7+ years of professional experience, I specialize in building scalable web applications
+                        from concept to production. My expertise spans the entire MERN stack, cloud infrastructure,
+                        AI/ML integration, and technical leadership — delivering solutions that are fast, secure, and
+                        built to scale.
+                    </p>
+                    <p style="margin-top: 0.75rem;">
+                        I work with startups and enterprises globally, bringing both technical depth and strategic
+                        thinking to every project.
+                    </p>
                 </div>
-                <!-- API & Backend Engineering -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <article class="service-card p-4 h-100 rounded shadow-sm" data-animate="fade-up" data-delay="60">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-sq bg-white rounded-circle d-flex align-items-center justify-content-center mr-3"
-                                aria-hidden="true" style="width:48px;height:48px;">
-                                <i class="fas fa-network-wired fa-lg text-primary"></i>
-                            </div>
-                            <h4 class="mb-0">RESTful API & Backend Development (Node.js, GraphQL, Microservices)</h4>
-                        </div>
-                        <p class="text-muted">Designing robust RESTful and GraphQL APIs, microservices, authentication,
-                            and third-party integrations. Scalable backend systems for modern applications.</p>
-                        <ul class="text-muted small mb-3">
-                            <li>RESTful & GraphQL APIs</li>
-                            <li>Microservices & integrations</li>
-                            <li>Authentication & security</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline-primary btn-sm">Request API Solution</a>
-                    </article>
+
+                <!-- Stats -->
+                <div class="bento-card bento-stat">
+                    <span class="stat-num" data-target="7">0</span>
+                    <span class="stat-label">Years Experience</span>
                 </div>
-                <!-- Cloud Architecture & DevOps -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <article class="service-card p-4 h-100 rounded shadow-sm" data-animate="fade-up" data-delay="120">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-sq bg-white rounded-circle d-flex align-items-center justify-content-center mr-3"
-                                aria-hidden="true" style="width:48px;height:48px;">
-                                <i class="fas fa-cloud fa-lg text-primary"></i>
-                            </div>
-                            <h4 class="mb-0">Cloud Solutions & DevOps Engineering (AWS, Azure, GCP, CI/CD)</h4>
-                        </div>
-                        <p class="text-muted">Cloud deployment (AWS, Azure, GCP), CI/CD pipelines, infrastructure as
-                            code, and automation. Reliable, scalable, and cost-effective cloud solutions.</p>
-                        <ul class="text-muted small mb-3">
-                            <li>Cloud migration & scaling</li>
-                            <li>CI/CD & automation</li>
-                            <li>Infrastructure as code</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline-primary btn-sm">Cloud Consultation</a>
-                    </article>
+                <div class="bento-card bento-stat">
+                    <span class="stat-num" data-target="50">0</span>
+                    <span class="stat-label">Projects Delivered</span>
                 </div>
-                <!-- Mobile App Development -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <article class="service-card p-4 h-100 rounded shadow-sm" data-animate="fade-up" data-delay="180">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-sq bg-white rounded-circle d-flex align-items-center justify-content-center mr-3"
-                                aria-hidden="true" style="width:48px;height:48px;">
-                                <i class="fas fa-mobile-alt fa-lg text-primary"></i>
-                            </div>
-                            <h4 class="mb-0">Mobile App Development (React Native, Flutter, iOS, Android)</h4>
-                        </div>
-                        <p class="text-muted">Cross-platform (React Native, Flutter) and native mobile apps for iOS and
-                            Android. Engaging, high-performance mobile experiences for your users.</p>
-                        <ul class="text-muted small mb-3">
-                            <li>React Native & Flutter</li>
-                            <li>Native iOS & Android</li>
-                            <li>App Store & Play Store launch</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline-primary btn-sm">Build Mobile App</a>
-                    </article>
+                <div class="bento-card bento-stat">
+                    <span class="stat-num" data-target="20">0</span>
+                    <span class="stat-label">Happy Clients</span>
                 </div>
-                <!-- UI/UX Design & Prototyping -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <article class="service-card p-4 h-100 rounded shadow-sm" data-animate="fade-up" data-delay="240">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-sq bg-white rounded-circle d-flex align-items-center justify-content-center mr-3"
-                                aria-hidden="true" style="width:48px;height:48px;">
-                                <i class="fas fa-pencil-ruler fa-lg text-primary"></i>
-                            </div>
-                            <h4 class="mb-0">UI/UX Design & Prototyping (Figma, Adobe XD, Accessibility)</h4>
-                        </div>
-                        <p class="text-muted">Modern, accessible, and conversion-focused interfaces for web and mobile.
-                            Wireframes, prototypes, and user-centric design for maximum impact.</p>
-                        <ul class="text-muted small mb-3">
-                            <li>Wireframing & prototyping</li>
-                            <li>Accessibility & usability</li>
-                            <li>Brand-aligned design</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline-primary btn-sm">Request Design</a>
-                    </article>
+
+                <!-- Skill Badges -->
+                <div class="bento-card bento-badge-wrap">
+                    <span class="badge-pill">Full Stack Development</span>
+                    <span class="badge-pill">React &amp; Next.js</span>
+                    <span class="badge-pill">Node.js &amp; Express</span>
+                    <span class="badge-pill">MongoDB &amp; SQL</span>
+                    <span class="badge-pill">AWS / Cloud</span>
+                    <span class="badge-pill">AI / LLM Integration</span>
+                    <span class="badge-pill">Docker &amp; CI/CD</span>
+                    <span class="badge-pill">React Native</span>
+                    <span class="badge-pill">GraphQL</span>
+                    <span class="badge-pill">System Design</span>
                 </div>
-                <!-- AI & Automation Solutions -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <article class="service-card p-4 h-100 rounded shadow-sm" data-animate="fade-up" data-delay="300">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-sq bg-white rounded-circle d-flex align-items-center justify-content-center mr-3"
-                                aria-hidden="true" style="width:48px;height:48px;">
-                                <i class="fas fa-robot fa-lg text-primary"></i>
-                            </div>
-                            <h4 class="mb-0">AI, Machine Learning & Automation Solutions</h4>
-                        </div>
-                        <p class="text-muted">Integrating AI/ML, chatbots, workflow automation, and data-driven features
-                            to streamline business processes and enhance user experience.</p>
-                        <ul class="text-muted small mb-3">
-                            <li>AI/ML integration</li>
-                            <li>Chatbots & automation</li>
-                            <li>Data-driven features</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline-primary btn-sm">Explore AI Solutions</a>
-                    </article>
+
+                <!-- Info Cards -->
+                <div class="bento-card bento-info">
+                    <span class="info-label"><i class="fas fa-map-marker-alt"></i> Location</span>
+                    <span class="info-value">India (Remote Worldwide)</span>
                 </div>
-                <!-- Technical Consulting & Code Audits -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <article class="service-card p-4 h-100 rounded shadow-sm" data-animate="fade-up" data-delay="360">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-sq bg-white rounded-circle d-flex align-items-center justify-content-center mr-3"
-                                aria-hidden="true" style="width:48px;height:48px;">
-                                <i class="fas fa-user-shield fa-lg text-primary"></i>
-                            </div>
-                            <h4 class="mb-0">Technical Consulting, Code Review & Software Architecture</h4>
-                        </div>
-                        <p class="text-muted">Architecture reviews, code quality audits, performance and security
-                            optimization. Actionable insights to improve your product and team.</p>
-                        <ul class="text-muted small mb-3">
-                            <li>Architecture & code reviews</li>
-                            <li>Performance & security audits</li>
-                            <li>Best practices & mentoring</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline-primary btn-sm">Book a Consultation</a>
-                    </article>
+                <div class="bento-card bento-info">
+                    <span class="info-label"><i class="fas fa-briefcase"></i> Availability</span>
+                    <span class="info-value">Open to Freelance &amp; Full-time</span>
                 </div>
-                <!-- SEO & Performance Optimization -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <article class="service-card p-4 h-100 rounded shadow-sm" data-animate="fade-up" data-delay="420">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-sq bg-white rounded-circle d-flex align-items-center justify-content-center mr-3"
-                                aria-hidden="true" style="width:48px;height:48px;">
-                                <i class="fas fa-search fa-lg text-primary"></i>
-                            </div>
-                            <h4 class="mb-0">SEO Services & Website Performance Optimization</h4>
-                        </div>
-                        <p class="text-muted">Improving site speed, SEO, accessibility, and Core Web Vitals for better
-                            rankings and user experience. Data-driven optimization for measurable results.</p>
-                        <ul class="text-muted small mb-3">
-                            <li>SEO audits & strategy</li>
-                            <li>Performance tuning</li>
-                            <li>Accessibility improvements</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline-primary btn-sm">Get SEO Audit</a>
-                    </article>
+                <div class="bento-card bento-info">
+                    <span class="info-label"><i class="fas fa-graduation-cap"></i> Focus</span>
+                    <span class="info-value">MERN · AI · Cloud · Mobile</span>
                 </div>
-                <!-- Team Leadership & Mentoring -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <article class="service-card p-4 h-100 rounded shadow-sm" data-animate="fade-up" data-delay="480">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="icon-sq bg-white rounded-circle d-flex align-items-center justify-content-center mr-3"
-                                aria-hidden="true" style="width:48px;height:48px;">
-                                <i class="fas fa-users fa-lg text-primary"></i>
-                            </div>
-                            <h4 class="mb-0">Engineering Team Leadership & Technical Mentoring</h4>
-                        </div>
-                        <p class="text-muted">Leading engineering teams, process improvement, and technical mentorship.
-                            Empowering teams to deliver high-quality software efficiently.</p>
-                        <ul class="text-muted small mb-3">
-                            <li>Team leadership & coaching</li>
-                            <li>Process improvement</li>
-                            <li>Technical mentorship</li>
-                        </ul>
-                        <a href="#contact" class="btn btn-outline-primary btn-sm">Discuss Leadership</a>
-                    </article>
+
+                <!-- CTA -->
+                <div class="bento-card bento-cta">
+                    <a href="#contact" class="btn-cta-primary">
+                        <i class="fas fa-paper-plane"></i> Hire Me
+                    </a>
+                    <a href="#portfolio" class="btn-cta-outline">
+                        <i class="fas fa-folder-open"></i> View Portfolio
+                    </a>
+                    <a href="path/to/your-cv.pdf" class="btn-cta-outline" download>
+                        <i class="fas fa-download"></i> Download CV
+                    </a>
                 </div>
+
             </div>
         </div>
-    </div>
-    <div class="container-fluid pt-5 pb-3" id="portfolio">
+    </section>
+
+    <!-- ===== SKILLS ===== -->
+    <section id="skill" class="py-5">
         <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase" style="color:#f3f7fb;">Portfolio</h1>
-                <h1 class="position-absolute text-uppercase text-dark">My Projects</h1>
+            <div class="section-header">
+                <span class="section-label">What I Know</span>
+                <h2>Tech <span>Stack</span></h2>
+                <p>A broad and deep toolkit built over 7+ years of professional engineering.</p>
             </div>
-            <div class="row">
-                <div class="col-12 text-center mb-2">
-                    <ul class="list-inline mb-4" id="portfolio-flters">
-                        <li class="btn btn-sm btn-outline-dark m-1 active" data-filter="*">All</li>
-                        <li class="btn btn-sm btn-outline-dark m-1" data-filter=".first">MERN Stack</li>
-                        <li class="btn btn-sm btn-outline-dark m-1" data-filter=".second">React/Node API</li>
-                        <li class="btn btn-sm btn-outline-dark m-1" data-filter=".third">WordPress/E-commerce</li>
+
+            <div class="skills-tabs">
+                <button class="skill-tab active" data-filter="all">All</button>
+                <button class="skill-tab" data-filter="web">Web</button>
+                <button class="skill-tab" data-filter="backend">Backend</button>
+                <button class="skill-tab" data-filter="cloud">Cloud &amp; DevOps</button>
+                <button class="skill-tab" data-filter="ai">AI / ML</button>
+                <button class="skill-tab" data-filter="tools">Tools</button>
+            </div>
+
+            <div class="skills-modern-grid" id="skills-grid-container">
+                <!-- Populated by main.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES ===== -->
+    <section id="service" class="py-5">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">What I Offer</span>
+                <h2>My <span>Services</span></h2>
+                <p>End-to-end engineering services — from idea and design to deployment and scale.</p>
+            </div>
+
+            <div class="services-modern-grid" id="services-grid-container">
+                <!-- Populated by main.js -->
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PORTFOLIO ===== -->
+    <section id="portfolio" class="py-5">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">My Work</span>
+                <h2>Featured <span>Projects</span></h2>
+                <p>A selection of projects that showcase my range and depth across different domains.</p>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-12 text-center">
+                    <ul class="list-inline mb-0" id="portfolio-flters">
+                        <li class="btn btn-sm m-1 active" data-filter="*">All</li>
+                        <li class="btn btn-sm m-1" data-filter=".mern">MERN Stack</li>
+                        <li class="btn btn-sm m-1" data-filter=".react">React / Node API</li>
+                        <li class="btn btn-sm m-1" data-filter=".ai">AI Projects</li>
+                        <li class="btn btn-sm m-1" data-filter=".wordpress">WordPress</li>
                     </ul>
                 </div>
             </div>
+
             <div class="row portfolio-container">
+                <!-- Populated by main.js -->
             </div>
         </div>
-    </div>
-    <div class="container-fluid py-5" id="testimonial">
+    </section>
+
+    <!-- ===== TESTIMONIALS ===== -->
+    <section id="testimonial" class="py-5">
         <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase" style="color:#f3f7fb;">Review</h1>
-                <h1 class="position-absolute text-uppercase text-dark">Clients Say</h1>
+            <div class="section-header">
+                <span class="section-label">Client Feedback</span>
+                <h2>What Clients <span>Say</span></h2>
+                <p>Real results, real relationships. Here's what people I've worked with have to say.</p>
             </div>
+
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active">
-                                <div class="text-center">
-                                    <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                                    <h4 class="font-weight-light mb-4">"Digvijay transformed our e-commerce platform
-                                        with his exceptional MERN stack expertise. The new application is not only
-                                        faster and more responsive but has significantly improved our conversion rates.
-                                        His attention to detail and commitment to delivering high-quality solutions made
-                                        him an invaluable partner for our business."</h4>
-                                    <img class="img-fluid rounded-circle mx-auto mb-3"
-                                        src="img/testimonials/testimonial-1.jpg" style="width: 80px; height: 80px;">
-                                    <h5 class="font-weight-bold m-0">Sarah Johnson</h5>
-                                    <span>E-commerce Director, TechStyle Inc.</span>
+                    <!-- Carousel: glass card wraps only the content; controls sit below -->
+                    <div id="testimonialCarousel" class="carousel slide" data-ride="carousel" data-interval="5000">
+
+                        <div class="testimonial-card-wrap">
+                            <div class="carousel-inner w-100">
+                                <div class="carousel-item active">
+                                    <div class="testimonial-inner-body">
+                                        <span class="quote-icon"><i class="fas fa-quote-left"></i></span>
+                                        <blockquote>
+                                            "Digvijay transformed our e-commerce platform with his exceptional MERN
+                                            stack expertise. The new application is faster, more responsive, and has
+                                            significantly improved our conversion rates. His attention to detail and
+                                            commitment to delivering high-quality solutions made him an invaluable
+                                            partner."
+                                        </blockquote>
+                                        <img class="client-avatar" src="img/testimonials/testimonial-1.jpg"
+                                            alt="Sarah Johnson">
+                                        <div class="client-name">Sarah Johnson</div>
+                                        <div class="client-role">E-commerce Director, TechStyle Inc.</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="text-center">
-                                    <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                                    <h4 class="font-weight-light mb-4">"Working with Digvijay on our custom CRM system
-                                        was a game-changer. His deep understanding of both frontend and backend
-                                        technologies, particularly React and Node.js, helped us create a seamless,
-                                        user-friendly application. The system has drastically improved our team's
-                                        productivity and client management capabilities."</h4>
-                                    <img class="img-fluid rounded-circle mx-auto mb-3"
-                                        src="img/testimonials/testimonial-2.jpg" style="width: 80px; height: 80px;">
-                                    <h5 class="font-weight-bold m-0">Michael Chen</h5>
-                                    <span>CTO, BusinessFlow Solutions</span>
+                                <div class="carousel-item">
+                                    <div class="testimonial-inner-body">
+                                        <span class="quote-icon"><i class="fas fa-quote-left"></i></span>
+                                        <blockquote>
+                                            "Working with Digvijay on our custom CRM system was a game-changer. His deep
+                                            understanding of React and Node.js helped us create a seamless,
+                                            user-friendly application that has drastically improved our team's
+                                            productivity and client management capabilities."
+                                        </blockquote>
+                                        <img class="client-avatar" src="img/testimonials/testimonial-2.jpg"
+                                            alt="Michael Chen">
+                                        <div class="client-name">Michael Chen</div>
+                                        <div class="client-role">CTO, BusinessFlow Solutions</div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="carousel-item">
-                                <div class="text-center">
-                                    <i class="fa fa-3x fa-quote-left text-primary mb-4"></i>
-                                    <h4 class="font-weight-light mb-4">"Digvijay's expertise in WordPress development
-                                        helped us create a beautiful, high-performing website that perfectly represents
-                                        our brand. His ability to customize solutions and optimize for SEO has resulted
-                                        in a 200% increase in our organic traffic. His professional approach and clear
-                                        communication made the entire process smooth and efficient."</h4>
-                                    <img class="img-fluid rounded-circle mx-auto mb-3"
-                                        src="img/testimonials/testimonial-3.jpg" style="width: 80px; height: 80px;">
-                                    <h5 class="font-weight-bold m-0">Emily Rodriguez</h5>
-                                    <span>Marketing Manager, Creative Solutions Ltd</span>
+                                <div class="carousel-item">
+                                    <div class="testimonial-inner-body">
+                                        <span class="quote-icon"><i class="fas fa-quote-left"></i></span>
+                                        <blockquote>
+                                            "Digvijay's expertise in WordPress development helped us create a beautiful,
+                                            high-performing website that perfectly represents our brand. His ability to
+                                            optimize for SEO resulted in a 200% increase in organic traffic.
+                                            Professional, clear communication throughout."
+                                        </blockquote>
+                                        <img class="client-avatar" src="img/testimonials/testimonial-3.jpg"
+                                            alt="Emily Rodriguez">
+                                        <div class="client-name">Emily Rodriguez</div>
+                                        <div class="client-role">Marketing Manager, Creative Solutions Ltd</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Previous</span>
-                        </a>
-                        <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                            <span class="sr-only">Next</span>
-                        </a>
+
+                        <!-- Controls outside the glass card -->
+                        <div class="testimonial-nav">
+                            <a class="testimonial-btn" href="#testimonialCarousel" role="button" data-slide="prev"
+                                aria-label="Previous">
+                                <i class="fas fa-chevron-left"></i>
+                            </a>
+                            <ol class="testimonial-dots">
+                                <li data-target="#testimonialCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#testimonialCarousel" data-slide-to="1"></li>
+                                <li data-target="#testimonialCarousel" data-slide-to="2"></li>
+                            </ol>
+                            <a class="testimonial-btn" href="#testimonialCarousel" role="button" data-slide="next"
+                                aria-label="Next">
+                                <i class="fas fa-chevron-right"></i>
+                            </a>
+                        </div>
+
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <!-- <div class="container-fluid pt-5" id="blog">
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="py-5">
         <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase" style="color:#f3f7fb;">Blog</h1>
-                <h1 class="position-absolute text-uppercase text-dark">Latest Blog</h1>
+            <div class="section-header">
+                <span class="section-label">Get In Touch</span>
+                <h2>Contact <span>Me</span></h2>
+                <p>Have a project in mind or want to collaborate? I'd love to hear from you.</p>
             </div>
-            <div class="row">
-                <div class="col-lg-4 mb-5">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded w-100" src="img/blog/blog-1.jpg"
-                            alt="Blog post about web development">
-                        <div class="blog-date">
-                            <h4 class="font-weight-bold mb-n1">01</h4>
-                            <small class="text-white text-uppercase">Jan</small>
-                        </div>
-                    </div>
-                    <h5 class="font-weight-medium mb-4">Rebum lorem no eos ut ipsum diam tempor sed rebum elitr ipsum
-                    </h5>
-                    <a class="btn btn-sm btn-outline-dark py-2" href="">Read More</a>
-                </div>
-                <div class="col-lg-4 mb-5">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded w-100" src="img/blog/blog-2.jpg" alt="Blog post about MERN Stack">
-                        <div class="blog-date">
-                            <h4 class="font-weight-bold mb-n1">01</h4>
-                            <small class="text-white text-uppercase">Jan</small>
-                        </div>
-                    </div>
-                    <h5 class="font-weight-medium mb-4">Rebum lorem no eos ut ipsum diam tempor sed rebum elitr ipsum
-                    </h5>
-                    <a class="btn btn-sm btn-outline-dark py-2" href="">Read More</a>
-                </div>
-                <div class="col-lg-4 mb-5">
-                    <div class="position-relative mb-4">
-                        <img class="img-fluid rounded w-100" src="img/blog/blog-3.jpg"
-                            alt="Blog post about WordPress development">
-                        <div class="blog-date">
-                            <h4 class="font-weight-bold mb-n1">01</h4>
-                            <small class="text-white text-uppercase">Jan</small>
-                        </div>
-                    </div>
-                    <h5 class="font-weight-medium mb-4">Rebum lorem no eos ut ipsum diam tempor sed rebum elitr ipsum
-                    </h5>
-                    <a class="btn btn-sm btn-outline-dark py-2" href="">Read More</a>
-                </div>
-            </div>
-        </div>
-    </div> -->
-    <div class="container-fluid py-5" id="contact">
-        <div class="container">
-            <div class="position-relative d-flex align-items-center justify-content-center">
-                <h1 class="display-1 text-uppercase" style="color:#f3f7fb;">Contact</h1>
-                <h1 class="position-absolute text-uppercase text-dark">Contact Me</h1>
-            </div>
+
             <div class="row justify-content-center">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <div class="contact-info-card">
+                        <div class="cinfo-icon"><i class="fas fa-envelope"></i></div>
+                        <div class="cinfo-text">
+                            <div class="cinfo-label">Email</div>
+                            <div class="cinfo-value"><a
+                                    href="mailto:digvijaytiwari29@gmail.com">digvijaytiwari29@gmail.com</a></div>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="cinfo-icon"><i class="fab fa-linkedin-in"></i></div>
+                        <div class="cinfo-text">
+                            <div class="cinfo-label">LinkedIn</div>
+                            <div class="cinfo-value"><a href="https://www.linkedin.com/in/digvijaytiwari/"
+                                    target="_blank">linkedin.com/in/digvijaytiwari</a></div>
+                        </div>
+                    </div>
+                    <div class="contact-info-card">
+                        <div class="cinfo-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="cinfo-text">
+                            <div class="cinfo-label">Location</div>
+                            <div class="cinfo-value">India — Available Remotely</div>
+                        </div>
+                    </div>
+                </div>
+
                 <div class="col-lg-8">
-                    <div class="contact-form text-center">
+                    <div class="contact-form-wrap">
                         <div id="success"></div>
                         <form name="sentMessage" id="contactForm" novalidate="novalidate">
                             <div class="form-row">
-                                <div class="control-group col-sm-6">
-                                    <input type="text" class="form-control p-4" id="name" placeholder="Your Name"
+                                <div class="control-group col-sm-6 mb-3">
+                                    <input type="text" class="form-control" id="name" placeholder="Your Name"
                                         required="required" data-validation-required-message="Please enter your name" />
                                     <p class="help-block text-danger"></p>
                                 </div>
-                                <div class="control-group col-sm-6">
-                                    <input type="email" class="form-control p-4" id="email" placeholder="Your Email"
+                                <div class="control-group col-sm-6 mb-3">
+                                    <input type="email" class="form-control" id="email" placeholder="Your Email"
                                         required="required"
                                         data-validation-required-message="Please enter your email" />
                                     <p class="help-block text-danger"></p>
                                 </div>
                             </div>
-                            <div class="control-group">
-                                <input type="text" class="form-control p-4" id="subject" placeholder="Subject"
+                            <div class="control-group mb-3">
+                                <input type="text" class="form-control" id="subject" placeholder="Subject"
                                     required="required" data-validation-required-message="Please enter a subject" />
                                 <p class="help-block text-danger"></p>
                             </div>
-                            <div class="control-group">
-                                <textarea class="form-control py-3 px-4" rows="5" id="message" placeholder="Message"
+                            <div class="control-group mb-3">
+                                <textarea class="form-control" rows="5" id="message" placeholder="Your Message"
                                     required="required"
                                     data-validation-required-message="Please enter your message"></textarea>
                                 <p class="help-block text-danger"></p>
                             </div>
-                            <div>
-                                <button class="btn btn-outline-dark" type="submit" id="sendMessageButton">Send
-                                    Message</button>
+                            <div class="text-right">
+                                <button type="submit" id="sendMessageButton">
+                                    <i class="fas fa-paper-plane mr-2"></i> Send Message
+                                </button>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="container-fluid bg-primary text-dark mt-5 py-5 px-sm-3 px-md-5"
-        style="background-image: url('img/cta-bg-shape.png');">
-        <div class="container text-center py-5">
-            <div class="d-flex justify-content-center mb-4">
-                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-twitter"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-light btn-social mr-2" href="https://www.linkedin.com/in/digvijaytiwari/"
-                    target="_blank"><i class="fab fa-linkedin-in"></i></a>
-                <a class="btn btn-light btn-social" href="#"><i class="fab fa-instagram"></i></a>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="py-5">
+        <div class="container text-center">
+            <div class="footer-social">
+                <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.linkedin.com/in/digvijaytiwari/" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin-in"></i></a>
+                <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             </div>
-
-            <p class="m-0">&copy; <a class="text-dark font-weight-bold" href="#">digvijaytiwari.in</a>. All Rights
-                Reserved.</p>
+            <p>&copy; 2025 <a href="#">digvijaytiwari.in</a> — All Rights Reserved.</p>
         </div>
-    </div>
-    <i class="fa fa-2x fa-angle-down text-dark scroll-to-bottom"></i>
+    </footer>
 
-    <a href="#" class="btn btn-outline-dark px-0 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top" aria-label="Back to top"><i class="fa fa-angle-double-up"></i></a>
 
+    <!-- ===== SCRIPTS ===== -->
+    <!-- jQuery & Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+    <!-- Lenis Smooth Scroll -->
+    <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+
+    <!-- tsParticles -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+
+    <!-- VanillaTilt -->
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-tilt@1.8.1/dist/vanilla-tilt.min.js"></script>
+
+    <!-- Splitting.js -->
+    <script src="https://cdn.jsdelivr.net/npm/splitting@1.0.6/dist/splitting.min.js"></script>
+
+    <!-- Typed.js -->
     <script src="lib/typed/typed.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/isotope/isotope.pkgd.min.js"></script>
-    <script src="lib/lightbox/js/lightbox.min.js"></script>
 
+    <!-- Isotope -->
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+
+    <!-- Owl Carousel -->
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+    <!-- Contact form -->
     <script src="mail/jqBootstrapValidation.min.js"></script>
     <script src="mail/contact.js"></script>
-    <script src="js/ui-animations.js"></script>
+
+    <!-- Custom JS (load dom.js first, then ui-animations, then main) -->
     <script src="js/dom.js"></script>
+    <script src="js/ui-animations.js"></script>
     <script src="js/main.js"></script>
+</body>
 
 </html>

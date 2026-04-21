@@ -49,42 +49,42 @@ const portfolioItems = [
         title: 'Enterprise SaaS Dashboard',
         description: 'Developed a comprehensive B2B SaaS dashboard with real-time data analytics, user role management, and third-party API integrations using MERN stack.',
         image: 'img/portfolio/portfolio-1.jpg',
-        link: 'https://example.com/saas-dashboard', // Placeholder link
+        link: '#', // Placeholder link
         categories: ['web', 'app', 'mern']
     },
     {
         title: 'Headless E-commerce Storefront',
         description: 'Engineered a high-performance headless e-commerce platform using React/Next.js, integrated with a custom backend for product management and secure payment gateways.',
         image: 'img/portfolio/portfolio-2.jpg',
-        link: 'https://example.com/ecommerce-store', // Placeholder link
+        link: '#', // Placeholder link
         categories: ['web', 'react', 'e-commerce']
     },
     {
         title: 'AI-Powered Content Generation Platform',
         description: 'Built a GenAI web application enabling users to generate marketing copy, articles, and social media content using advanced LLMs, with a focus on prompt engineering and scalability.',
         image: 'img/portfolio/portfolio-3.jpg',
-        link: 'https://example.com/ai-content-gen', // Placeholder link
+        link: '#', // Placeholder link
         categories: ['web', 'ai', 'genai']
     },
     {
         title: 'Cross-Platform Logistics Mobile App',
         description: 'Designed and developed a React Native mobile application for real-time logistics tracking, including driver management, route optimization, and delivery status updates.',
         image: 'img/portfolio/portfolio-4.jpg',
-        link: 'https://example.com/logistics-app', // Placeholder link
+        link: '#', // Placeholder link
         categories: ['mobile', 'app', 'react-native']
     },
     {
         title: 'Custom Multi-Vendor Marketplace',
         description: 'Created a robust multi-vendor e-commerce marketplace with custom WordPress/WooCommerce development, featuring vendor dashboards, commission management, and secure transactions.',
         image: 'img/portfolio/portfolio-5.jpg',
-        link: 'https://example.com/marketplace', // Placeholder link
+        link: '#', // Placeholder link
         categories: ['web', 'e-commerce', 'wordpress']
     },
     {
         title: 'Intelligent Customer Support Chatbot',
         description: 'Implemented an intelligent chatbot solution for customer support, leveraging NLP and machine learning to handle queries, provide instant answers, and escalate complex issues.',
         image: 'img/portfolio/portfolio-6.jpg',
-        link: 'https://example.com/chatbot-solution', // Placeholder link
+        link: '#', // Placeholder link
         categories: ['web', 'ai', 'chatbot']
     }
 ]

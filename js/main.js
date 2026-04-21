@@ -1,150 +1,182 @@
 (function ($) {
-    "use strict"
+  'use strict';
 
-    // Navbar on scrolling
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 200) {
-            $('.navbar').fadeIn('slow').css('display', 'flex')
+  // ─── Typed.js ─────────────────────────────────────────────────────────────
+  if ($('.typed-text-output').length === 1) {
+    var typedStrings = $('.typed-text').text();
+    new Typed('.typed-text-output', {
+      strings: typedStrings.split(', '),
+      typeSpeed: 90,
+      backSpeed: 25,
+      smartBackspace: false,
+      loop: true
+    });
+  }
+
+  // ─── Skills — bar card rendering ──────────────────────────────────────────
+  var skillCategories = {
+    'HTML5':                      'web',
+    'CSS3 / SCSS':                'web',
+    'JavaScript (ES6+)':          'web',
+    'TypeScript':                 'web',
+    'React.js':                   'web',
+    'Next.js':                    'web',
+    'Node.js':                    'web',
+    'Express.js':                 'web',
+    'MongoDB':                    'backend',
+    'SQL (MySQL, PostgreSQL)':    'backend',
+    'PHP / Laravel (LAMP)':       'backend',
+    'GraphQL / Apollo':           'backend',
+    'AWS / Azure / GCP':          'cloud',
+    'Docker / Kubernetes':        'cloud',
+    'CI/CD (Jenkins, GitLab CI)': 'cloud',
+    'Git / GitHub / GitLab':      'cloud',
+    'Terraform / IaC':            'cloud',
+    'Generative AI (LLMs)':       'ai',
+    'LangChan':                   'ai',
+    'LangGraph':                  'ai',
+    'Machine Learning':           'ai',
+    'React Native / Flutter':     'tools',
+    'Agile / Scrum':              'tools',
+    'System Design / Architecture': 'tools',
+    'Technical Leadership':       'tools',
+    'Code Review / Mentoring':    'tools',
+    'WordPress / CMS':            'tools',
+    'SEO / Performance Opt.':     'tools',
+    'Figma / Adobe XD':           'tools',
+    'Jira / Confluence':          'tools'
+  };
+
+  var skillsContainer = document.getElementById('skills-grid-container');
+  if (skillsContainer && typeof skilles !== 'undefined') {
+    skilles.forEach(function (skill) {
+      var cat = skillCategories[skill.name] || 'tools';
+      var pct = skill.level.replace('%', '');
+      var card = document.createElement('div');
+      card.className = 'skill-bar-card';
+      card.dataset.category = cat;
+      card.innerHTML =
+        '<div class="skill-icon-box"><i class="' + skill.icon + '"></i></div>' +
+        '<div class="skill-info">' +
+          '<span class="skill-name-text">' + skill.name + '</span>' +
+          '<div class="skill-bar-track">' +
+            '<div class="skill-bar-fill" data-width="' + skill.level + '"></div>' +
+          '</div>' +
+        '</div>' +
+        '<span class="skill-pct">' + skill.level + '</span>';
+      skillsContainer.appendChild(card);
+    });
+  }
+
+  // ─── Skill Tab Filtering ───────────────────────────────────────────────────
+  document.querySelectorAll('.skill-tab').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      document.querySelectorAll('.skill-tab').forEach(function (t) { t.classList.remove('active'); });
+      tab.classList.add('active');
+
+      var filter = tab.dataset.filter;
+      document.querySelectorAll('.skill-bar-card').forEach(function (card) {
+        if (filter === 'all' || card.dataset.category === filter) {
+          card.style.display = 'flex';
+          // Re-trigger bar animation for visible cards
+          var fill = card.querySelector('.skill-bar-fill');
+          if (fill) {
+            fill.style.width = '0%';
+            setTimeout(function () { fill.style.width = fill.dataset.width; }, 80);
+          }
         } else {
-            $('.navbar').fadeOut('slow').css('display', 'none')
+          card.style.display = 'none';
         }
-    })
+      });
+    });
+  });
 
+  // ─── Services — render from dom.js ────────────────────────────────────────
+  var servicesContainer = document.getElementById('services-grid-container');
+  if (servicesContainer && typeof serviceData !== 'undefined') {
+    serviceData.forEach(function (svc, i) {
+      var num = (i + 1).toString().padStart(2, '0');
+      var card = document.createElement('div');
+      card.className = 'service-card-new';
+      card.innerHTML =
+        '<span class="service-num">' + num + '</span>' +
+        '<div class="service-icon-wrap"><i class="' + svc.icon + '"></i></div>' +
+        '<h5>' + svc.title + '</h5>' +
+        '<p>' + svc.description + '</p>';
+      servicesContainer.appendChild(card);
+    });
+  }
 
-    // Smooth scrolling on the navbar links
-    $(".navbar-nav a").on('click', function (event) {
-        if (this.hash !== "") {
-            event.preventDefault()
+  // ─── Portfolio — isotope + filter ─────────────────────────────────────────
+  $(document).ready(function () {
+    var $container = $('.portfolio-container');
 
-            $('html, body').animate({
-                scrollTop: $(this.hash).offset().top - 45
-            }, 1500, 'easeInOutExpo')
+    if (typeof portfolioItems !== 'undefined') {
+      portfolioItems.forEach(function (item) {
+        // Use direct CSS classes (no Bootstrap col-* — Isotope needs display:block parent)
+        var cats = item.categories.map(function (c) {
+          return c.replace(/[^a-zA-Z0-9-_]/g, '');
+        }).join(' ');
 
-            if ($(this).parents('.navbar-nav').length) {
-                $('.navbar-nav .active').removeClass('active')
-                $(this).closest('a').addClass('active')
-            }
-        }
-    })
-
-
-    // Typed Initiate
-    if ($('.typed-text-output').length == 1) {
-        var typed_strings = $('.typed-text').text()
-        var typed = new Typed('.typed-text-output', {
-            strings: typed_strings.split(', '),
-            typeSpeed: 100,
-            backSpeed: 20,
-            smartBackspace: false,
-            loop: true
-        })
+        var html =
+          '<div class="portfolio-item ' + cats + '">' +
+            '<div class="portfolio-img">' +
+              '<img src="' + item.image + '" alt="' + item.title + '" loading="lazy">' +
+            '</div>' +
+            '<div class="portfolio-text">' +
+              '<h4>' + item.title + '</h4>' +
+              '<p>' + item.description + '</p>' +
+              '<a class="btn" href="' + item.link + '" target="_blank" rel="noopener">' +
+                '<i class="fas fa-external-link-alt mr-1"></i> View Project' +
+              '</a>' +
+            '</div>' +
+          '</div>';
+        $container.append(html);
+      });
     }
 
+    // Initialize Isotope only after all images have loaded (prevents layout jitter)
+    var $iso;
+    function initIsotope() {
+      $iso = $container.isotope({
+        itemSelector: '.portfolio-item',
+        layoutMode: 'fitRows',
+        fitRows: { gutter: 16 }
+      });
+    }
 
-    // Modal Video
-    $(document).ready(function () {
-        var $videoSrc
-        $('.btn-play').click(function () {
-            $videoSrc = $(this).data("src")
-        })
-        console.log($videoSrc)
+    // Use imagesLoaded if available, otherwise fall back to window load
+    if (typeof $.fn.imagesLoaded === 'function') {
+      $container.imagesLoaded(initIsotope);
+    } else {
+      // Small delay ensures images are settled before measuring
+      $(window).on('load', function () {
+        setTimeout(initIsotope, 100);
+      });
+      // Fallback if window already loaded
+      if (document.readyState === 'complete') {
+        setTimeout(initIsotope, 200);
+      }
+    }
 
-        $('#videoModal').on('shown.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0")
-        })
-
-        $('#videoModal').on('hide.bs.modal', function (e) {
-            $("#video").attr('src', $videoSrc)
-        })
-    })
-
-
-    // Scroll to Bottom
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 100) {
-            $('.scroll-to-bottom').fadeOut('slow')
-        } else {
-            $('.scroll-to-bottom').fadeIn('slow')
-        }
-    })
-
-
-    // Skills
-    $(document).ready(function () {
-        const skillsContainer = $('.skills-grid .row')
-        skilles.forEach((skill, index) => {
-            const skillHTML = `
-                <div class="col-6 col-sm-4 col-md-3 col-lg-2 mb-4">
-                    <div class="card text-center p-3 h-100" data-animate="fade-up" data-delay="${index * 50}">
-                        <div class="mb-2"><i class="${skill.icon} fa-2x text-primary"></i></div>
-                        <div class="font-weight-bold">${skill.name}</div>
-                        <div class="text-muted">${skill.level}</div>
-                    </div>
-                </div>
-            `
-            skillsContainer.append(skillHTML)
-        })
-    })
-
-
-
-    // Portfolio isotope and filter
-    $(document).ready(function () {
-        const portfolioContainer = $('.portfolio-container');
-        portfolioItems.forEach((item, index) => {
-            const categoriesClass = item.categories.map(cat => cat.replace(/[^a-zA-Z0-9-_]/g, '')).join(' ');
-            const portfolioHTML = `
-                    <div class="col-lg-6 col-md-6 portfolio-item ${categoriesClass} mb-4">
-                    <div class="position-relative overflow-hidden rounded-lg shadow-sm portfolio-hover-effect">
-                        <img class="img-fluid w-100" src="${item.image}" alt="${item.title}">
-                        <div class="portfolio-text bg-dark bg-opacity-75 d-flex flex-column justify-content-center align-items-center p-4 text-center">
-                            <h4 class="text-white font-weight-bold mb-2">${item.title}</h4>
-                            <p class="text-white-50 mb-3">${item.description}</p>
-                            <a class="btn btn-outline-light btn-sm" href="${item.link}" target="_blank">
-                                <i class="fa fa-link"></i> View Project
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            `;
-            portfolioContainer.append(portfolioHTML);
-        });
-
-        var portfolioIsotope = $('.portfolio-container').isotope({
-            itemSelector: '.portfolio-item',
-            layoutMode: 'fitRows'
-        });
-        $('#portfolio-flters li').on('click', function () {
-            $("#portfolio-flters li").removeClass('active');
-            $(this).addClass('active');
-
-            portfolioIsotope.isotope({ filter: $(this).data('filter') });
-        });
+    $('#portfolio-flters li').on('click', function () {
+      $('#portfolio-flters li').removeClass('active');
+      $(this).addClass('active');
+      if ($iso) $iso.isotope({ filter: $(this).data('filter') });
     });
+  });
 
+  // ─── Testimonial Dot Indicator Sync ─────────────────────────────────────
+  $('#testimonialCarousel').on('slide.bs.carousel', function (e) {
+    var idx = e.to;
+    $('.testimonial-dots li').removeClass('active');
+    $('.testimonial-dots li').eq(idx).addClass('active');
+  });
 
-    // Back to top button
-    $(window).scroll(function () {
-        if ($(this).scrollTop() > 200) {
-            $('.back-to-top').fadeIn('slow')
-        } else {
-            $('.back-to-top').fadeOut('slow')
-        }
-    })
-    $('.back-to-top').click(function () {
-        $('html, body').animate({ scrollTop: 0 }, 1500, 'easeInOutExpo')
-        return false
-    })
-
-
-    // Testimonials carousel
-    $(".testimonial-carousel").owlCarousel({
-        autoplay: true,
-        smartSpeed: 1500,
-        dots: true,
-        loop: true,
-        items: 1
-    })
+  // ─── Back to Top click ────────────────────────────────────────────────────
+  $('.back-to-top').on('click', function (e) {
+    e.preventDefault();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
 
 })(jQuery);
-
