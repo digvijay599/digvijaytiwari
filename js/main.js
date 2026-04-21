@@ -14,44 +14,22 @@
   }
 
   // ─── Skills — bar card rendering ──────────────────────────────────────────
-  var skillCategories = {
-    'HTML5':                      'web',
-    'CSS3 / SCSS':                'web',
-    'JavaScript (ES6+)':          'web',
-    'TypeScript':                 'web',
-    'React.js':                   'web',
-    'Next.js':                    'web',
-    'Node.js':                    'web',
-    'Express.js':                 'web',
-    'MongoDB':                    'backend',
-    'SQL (MySQL, PostgreSQL)':    'backend',
-    'PHP / Laravel (LAMP)':       'backend',
-    'GraphQL / Apollo':           'backend',
-    'AWS / Azure / GCP':          'cloud',
-    'Docker / Kubernetes':        'cloud',
-    'CI/CD (Jenkins, GitLab CI)': 'cloud',
-    'Git / GitHub / GitLab':      'cloud',
-    'Terraform / IaC':            'cloud',
-    'Generative AI (LLMs)':       'ai',
-    'LangChan':                   'ai',
-    'LangGraph':                  'ai',
-    'Machine Learning':           'ai',
-    'React Native / Flutter':     'tools',
-    'Agile / Scrum':              'tools',
-    'System Design / Architecture': 'tools',
-    'Technical Leadership':       'tools',
-    'Code Review / Mentoring':    'tools',
-    'WordPress / CMS':            'tools',
-    'SEO / Performance Opt.':     'tools',
-    'Figma / Adobe XD':           'tools',
-    'Jira / Confluence':          'tools'
-  };
+  function normalizeSkillFilter(category) {
+    var c = (category || '').toString().trim().toLowerCase();
+    if (c === 'frontend') return 'web';
+    if (c === 'backend') return 'backend';
+    if (c === 'database') return 'backend';
+    if (c === 'architecture') return 'backend';
+    if (c === 'cloud') return 'cloud';
+    if (c === 'ai') return 'ai';
+    if (c === 'messaging') return 'backend';
+    return 'tools';
+  }
 
   var skillsContainer = document.getElementById('skills-grid-container');
-  if (skillsContainer && typeof skilles !== 'undefined') {
-    skilles.forEach(function (skill) {
-      var cat = skillCategories[skill.name] || 'tools';
-      var pct = skill.level.replace('%', '');
+  if (skillsContainer && typeof skills !== 'undefined' && Array.isArray(skills)) {
+    skills.forEach(function (skill) {
+      var cat = normalizeSkillFilter(skill.category);
       var card = document.createElement('div');
       card.className = 'skill-bar-card';
       card.dataset.category = cat;
@@ -66,6 +44,10 @@
         '<span class="skill-pct">' + skill.level + '</span>';
       skillsContainer.appendChild(card);
     });
+
+    document.dispatchEvent(new CustomEvent('skills:rendered', {
+      detail: { count: skills.length }
+    }));
   }
 
   // ─── Skill Tab Filtering ───────────────────────────────────────────────────
